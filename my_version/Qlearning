@@ -1,0 +1,25 @@
+Sn = loss
+Sn-1 : a [1, 0, 0 ..., 0] hans tur
+Sn-2 : a [0,0, -1, 0, ...] min tur
+
+
+Net(Sn) = 1
+Net(Sn-1) = -1
+Net(Sn-2) = gamma*1
+...
+
+during training:
+
+S = current state, a = moves = [0,1,2,3,4,5,6]
+Si = next states from making move i
+
+1 :
+pick best of S0 S1 and so on, we pick Si
+
+get to lose state Sn
+Net(Sn) = 1
+and move backward
+Net(Sn-1) = -1
+
+back to first state after making first move,
+only Net(Sj) is updated
