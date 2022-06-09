@@ -329,6 +329,9 @@ class CNN6Model(nn.Module):
         self.dropout = nn.Dropout(p=0.25)
         self.linear2 = nn.Linear(8, 1)
 
+    def target(self, prediction, reward):
+        return reward
+
     def forward(self, x):
         out = self.cnn1(x)
         out = self.prelu1(out)

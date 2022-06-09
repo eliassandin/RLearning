@@ -1,11 +1,11 @@
 import gym
-from keras.models import load_model
+
 from gym_connect_four import RandomPlayer, ConnectFourEnv
 import numpy as np
 import pandas as pd
 from NeuralModel import *
 import torch
-from Agent import SmartPlayer, SmartPlayer2, FilterPlayer, SmartPlayer3
+from Agent import *
 import random
 
 env: ConnectFourEnv = gym.make("ConnectFour-v0")

@@ -133,9 +133,9 @@ def train_batch(X, Y, model,loss_fn, optimizer, epochs, batch_size, early_stop =
                 'best_model.pth')
             else:
                 epochs_since_improvement +=1
-                if epochs_since_improvement > epochs/2:
+                if epochs_since_improvement > epochs/3:
                     break
-                elif epochs_since_improvement > 3 and improvement:
+                elif epochs_since_improvement > 2 and improvement:
                     break
         min_loss = min(min_loss, v_loss)
     print("EPOCH=",t, "last improvement: ", t-epochs_since_improvement)
